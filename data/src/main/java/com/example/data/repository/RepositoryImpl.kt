@@ -1,5 +1,6 @@
 package com.example.data.repository
 
+import com.example.data.bean.EntityBean
 import com.example.data.database.Dao
 import com.example.domain.repository.Repository
 import javax.inject.Inject
