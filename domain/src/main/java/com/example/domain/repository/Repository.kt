@@ -1,10 +1,10 @@
 package com.example.domain.repository
 
-import com.example.data.bean.EntityBean
+import com.example.domain.model.EntityModel
 
 interface Repository {
 
-    suspend fun insertItem(bean: EntityBean)
+    suspend fun insertItem(bean: EntityModel)
 
-    suspend fun fetchItems(): List<EntityBean>
+    suspend fun fetchItems(): List<EntityModel>
 }

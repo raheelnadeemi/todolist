@@ -4,8 +4,6 @@ import android.content.Context
 import androidx.room.Room
 import com.example.data.database.Dao
 import com.example.data.database.Database
-import com.example.data.repository.RepositoryImpl
-import com.example.domain.repository.Repository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,8 +26,5 @@ object DataModule {
         return database.getDao()
     }
 
-    @Provides
-    fun provideRepository(dao: Dao): Repository {
-        return RepositoryImpl(dao)
-    }
+
 }

@@ -1,7 +1,7 @@
-package com.example.domain.transformation
+package com.example.data.transformation
 
 import com.example.data.bean.EntityBean
-import com.example.todolist.model.EntityModel
+import com.example.domain.model.EntityModel
 import javax.inject.Inject
 
 class Transformer @Inject constructor() {

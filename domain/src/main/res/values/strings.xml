@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">domain</string>
+    <string name="failed_to_add_todo">Failed to add TODO</string>
+    <string name="Something_went_wrong">Something went wrong</string>
+    <string name="error">error</string>
+
 </resources>

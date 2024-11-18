@@ -1,7 +1,7 @@
 package com.example.domain.di
 
+import android.content.Context
 import com.example.domain.repository.Repository
-import com.example.domain.transformation.Transformer
 import com.example.domain.usecase.FetchUseCase
 import com.example.domain.usecase.InsertUseCase
 import dagger.Module
@@ -15,17 +15,15 @@ import dagger.hilt.components.SingletonComponent
 object DomainModule {
 
     @Provides
-    fun provideInsertUseCase(repository: Repository, transformer: Transformer): InsertUseCase {
-        return InsertUseCase(repository, transformer)
+    fun provideInsertUseCase(repository: Repository, context: Context): InsertUseCase {
+        return InsertUseCase(repository, context)
     }
 
     @Provides
-    fun provideFetchUseCase(repository: Repository, transformer: Transformer): FetchUseCase {
-        return FetchUseCase(repository,transformer)
+    fun provideFetchUseCase(repository: Repository, context: Context): FetchUseCase {
+        return FetchUseCase(repository, context)
     }
 
 
-    @Provides
-    fun provideTransformer(): Transformer =
-        Transformer()
+
 }
