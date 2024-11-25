@@ -92,7 +92,7 @@ dependencies {
     testImplementation(libs.androidx.arch.core)
     testImplementation(libs.kotlinx.coroutines.test)
 
-
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    // Splash Screen
+    implementation(libs.androidx.splash)
 
 }

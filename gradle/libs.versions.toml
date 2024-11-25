@@ -19,6 +19,8 @@ mockkVersion = "1.13.12"
 archCoreVersion = "2.1.0"
 coroutinesTestVersion = "1.7.2"
 kaptVersion = "1.9.0"
+splashVersion = "1.0.1"
+
 
 compileSdk = "35"
 minSdk = "27"
@@ -57,6 +59,8 @@ androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navig
 io-mockk = { group = "io.mockk", name = "mockk", version.ref = "mockkVersion" }
 androidx-arch-core = { group = "androidx.arch.core", name = "core-testing", version.ref = "archCoreVersion" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTestVersion" }
+androidx-splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashVersion" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
