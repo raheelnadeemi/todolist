@@ -2,6 +2,7 @@
 
 ## Tech Stack
 - **Android SDK**
+- **Splash Screen API**
 - **Kotlin**
 - **Clean Architecture**
 - **Coroutines**
