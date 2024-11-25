@@ -1,10 +1,11 @@
 package com.example.domain.repository
 
-import com.example.domain.model.EntityModel
+import com.example.domain.wrapper.TodoItem
 
 interface Repository {
 
-    suspend fun insertItem(bean: EntityModel)
+    suspend fun insertTodoItem(item: TodoItem)
 
-    suspend fun fetchItems(): List<EntityModel>
+    suspend fun fetchTodoItems(): List<TodoItem>
+
 }

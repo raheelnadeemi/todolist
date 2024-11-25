@@ -2,9 +2,9 @@ package com.example.domain.usecase
 
 import android.content.Context
 import com.example.domain.R
-import com.example.domain.helper.ResultState
-import com.example.domain.model.EntityModel
+import com.example.domain.wrapper.ResultState
 import com.example.domain.repository.Repository
+import com.example.domain.wrapper.TodoItem
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -16,15 +16,15 @@ class InsertUseCase @Inject constructor(
     private val context: Context
 ) {
 
-    operator fun invoke(model: EntityModel): Flow<ResultState<Unit>> = flow {
+    operator fun invoke(item: TodoItem): Flow<ResultState<Unit>> = flow {
         emit(ResultState.Loading)
         delay(3000)
-        if(model.item.lowercase().trim() == context.resources.getString(
+        if(item.item.lowercase().trim() == context.resources.getString(
                 R.string.error)){
             emit(ResultState.Error(context.resources.getString(
                 R.string.failed_to_add_todo)))
         }else{
-            repository.insertItem(model)
+            repository.insertTodoItem(item)
             emit(ResultState.Success(Unit))
         }
     }.catch {

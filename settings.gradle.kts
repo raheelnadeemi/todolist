@@ -20,6 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "TodoList"
-include(":presentation")
+include(":app")
 include(":domain")
 include(":data")

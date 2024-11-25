@@ -13,9 +13,12 @@ material = "1.12.0"
 navigationCompose = "2.7.7"
 hiltComposeVersion = "1.2.0"
 hiltVersion = "2.48.1"
-coroutineVersion="1.7.3"
 roomVersion = "2.6.1"
 androidApplicationPlugin = "8.2.2"
+mockkVersion = "1.13.12"
+archCoreVersion = "2.1.0"
+coroutinesTestVersion = "1.7.2"
+kaptVersion = "1.9.0"
 
 compileSdk = "35"
 minSdk = "27"
@@ -46,16 +49,18 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-hilt-compose = {group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltComposeVersion"}
 androidx-hilt = {group = "com.google.dagger", name ="hilt-android",version.ref = "hiltVersion"}
 androidx-hilt-compiler = {group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion"}
-androidx-coroutine-core = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutineVersion"}
-androidx-coroutine-android = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutineVersion"}
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomVersion" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationCompose" }
+io-mockk = { group = "io.mockk", name = "mockk", version.ref = "mockkVersion" }
+androidx-arch-core = { group = "androidx.arch.core", name = "core-testing", version.ref = "archCoreVersion" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTestVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "androidApplicationPlugin" }
 plugin-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kaptVersion"}

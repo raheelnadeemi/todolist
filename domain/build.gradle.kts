@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.plugin.hilt)
-    id("kotlin-kapt")
+    alias(libs.plugins.kapt)
 }
 
 android {
@@ -44,4 +44,10 @@ dependencies {
     //Hilt
     implementation(libs.androidx.hilt)
     kapt(libs.androidx.hilt.compiler)
+
+    //Test
+    testImplementation(libs.junit)
+    testImplementation(libs.io.mockk)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }

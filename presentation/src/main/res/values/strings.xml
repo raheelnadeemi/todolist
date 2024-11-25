@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">TodoList</string>
-    <string name="empty_list_content">Press the + button to add a TODO</string>
-    <string name="enter_new_item">Enter new item</string>
-    <string name="add_todo">Add TODO</string>
-    <string name="please_enter_text">Please enter text</string>
-
-
-</resources>
